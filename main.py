@@ -193,72 +193,84 @@ HTML = """
     <title>Base64Batch</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
-    <div class="bg-white p-8 rounded-xl shadow-xl w-full max-w-lg">
-        <h1 class="text-2xl font-bold mb-2 text-center text-indigo-600">⚡ Base64Batch</h1>
-        <p class="text-center text-gray-500 text-sm mb-6">Secure image → Base64 converter</p>
 
-        <form id="uploadForm" class="space-y-4">
-            <div id="dropzone" class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:bg-gray-50 transition">
-                <p class="text-gray-600">Drag & drop images here, or click to browse</p>
-                <input type="file" id="files" multiple class="hidden" accept="image/*">
-                <p id="fileCount" class="mt-2 text-sm text-indigo-600 font-medium"></p>
-            </div>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-between p-4">
 
-            <div>
-                <label for="apiKey" class="block text-sm font-medium text-gray-700 mb-1">
-                    API Key <span class="text-gray-400">(optional, required only if auth is enabled)</span>
-                </label>
-                <input
-                    type="password"
-                    id="apiKey"
-                    class="w-full border rounded-lg px-3 py-2"
-                    placeholder="Paste API key if needed"
-                    autocomplete="off"
-                >
-            </div>
+    <!-- MAIN CARD -->
+    <div class="flex-1 flex items-center justify-center w-full">
+        <div class="bg-white p-8 rounded-xl shadow-xl w-full max-w-lg">
+            <h1 class="text-2xl font-bold mb-2 text-center text-indigo-600">
+                ⚡ Base64Batch
+            </h1>
+            <p class="text-center text-gray-500 text-sm mb-6">
+                Secure image → Base64 converter
+            </p>
 
-            <div>
-                <label for="format" class="block text-sm font-medium text-gray-700 mb-1">Output format</label>
-                <select id="format" class="w-full border rounded-lg px-3 py-2">
-                    <option value="excel">Excel (.xlsx)</option>
-                    <option value="json">JSON</option>
-                </select>
-            </div>
+            <form id="uploadForm" class="space-y-4">
+                <div id="dropzone"
+                    class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:bg-gray-50 transition">
+                    <p class="text-gray-600">
+                        Drag & drop images here, or click to browse
+                    </p>
+                    <input type="file" id="files" multiple class="hidden" accept="image/*">
+                    <p id="fileCount" class="mt-2 text-sm text-indigo-600 font-medium"></p>
+                </div>
 
-            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-lg w-full font-semibold transition">
-                Convert
-            </button>
-        </form>
+                <div>
+                    <label for="apiKey" class="block text-sm font-medium text-gray-700 mb-1">
+                        API Key <span class="text-gray-400">(optional, required only if auth is enabled)</span>
+                    </label>
+                    <input
+                        type="password"
+                        id="apiKey"
+                        class="w-full border rounded-lg px-3 py-2"
+                        placeholder="Paste API key if needed"
+                        autocomplete="off"
+                    >
+                </div>
 
-        <div id="status" class="mt-4 text-center text-sm"></div>
+                <div>
+                    <label for="format" class="block text-sm font-medium text-gray-700 mb-1">
+                        Output format
+                    </label>
+                    <select id="format" class="w-full border rounded-lg px-3 py-2">
+                        <option value="excel">Excel (.xlsx)</option>
+                        <option value="json">JSON</option>
+                    </select>
+                </div>
 
-        <p class="mt-6 text-xs text-gray-400 text-center">
-            Free tier: max 5 files, 10MB each, 25MB total
-        </p>
+                <button type="submit"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-lg w-full font-semibold transition">
+                    Convert
+                </button>
+            </form>
+
+            <div id="status" class="mt-4 text-center text-sm"></div>
+
+            <p class="mt-6 text-xs text-gray-400 text-center">
+                Free tier: max 5 files, 10MB each, 25MB total
+            </p>
+        </div>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="w-full text-center py-4 text-xs text-gray-500">
+        <p class="mb-2">© Base64Batch</p>
+
+        <a href="https://buysellstartups.com/listings/base64batch-mp2zn0xo"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="inline-block">
+            <img src="https://buysellstartups.com/api/badge/base64batch-mp2zn0xo"
+                 alt="For Sale on Buy Sell Startups"
+                 width="280"
+                 height="68"
+                 class="mx-auto">
+        </a>
+    </footer>
 
     <script src="/static/app.js"></script>
 </body>
-<footer>
-
-  <p>© Base64Batch</p>
-
-  <!-- Buy Sell Startups Badge -->
-
-  <a href=https://buysellstartups.com/listings/base64batch-mp2zn0xo target="_blank" rel="noopener">
-
-    <img src=https://buysellstartups.com/api/badge/base64batch-mp2zn0xo
-
-         alt="For Sale on Buy Sell Startups"
-
-         width="280"
-
-         height="68">
-
-  </a>
-
-</footer>
 </html>
 """
 

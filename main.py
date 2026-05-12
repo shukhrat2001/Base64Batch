@@ -240,6 +240,25 @@ HTML = """
 
     <script src="/static/app.js"></script>
 </body>
+<footer>
+
+  <p>© Base64Batch</p>
+
+  <!-- Buy Sell Startups Badge -->
+
+  <a href=https://buysellstartups.com/listings/base64batch-mp2zn0xo target="_blank" rel="noopener">
+
+    <img src=https://buysellstartups.com/api/badge/base64batch-mp2zn0xo
+
+         alt="For Sale on Buy Sell Startups"
+
+         width="280"
+
+         height="68">
+
+  </a>
+
+</footer>
 </html>
 """
 
